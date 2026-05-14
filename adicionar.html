@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add Product</title>
+
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- ICONS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+/* ===== LAYOUT ===== */
+body {
+    background: #f5f6fa;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid #e5e5e5;
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar .menu-title {
+    font-size: 14px;
+    color: #999;
+    margin-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #f1f3f7;
+    color: #0d6efd;
+}
+
+.main {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+/* ===== HEADER ===== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 300px;
+}
+
+/* ===== CARD ===== */
+.card-custom {
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+}
+
+/* ===== FORM ===== */
+.form-control,
+.form-select {
+    border-radius: 8px;
+}
+
+/* ===== UPLOAD AREA ===== */
+.upload-box {
+    border: 2px dashed #d6d6d6;
+    border-radius: 10px;
+    padding: 60px;
+    text-align: center;
+    color: #777;
+    background: #fafafa;
+}
+
+/* ===== BUTTONS ===== */
+.btn-success {
+    background: #28a745;
+    border: none;
+}
+
+.btn-light {
+    border: 1px solid #ddd;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+  <div class="sidebar p-3">
+    <h5 class="mb-4">Menu</h5>
+
+    <nav class="nav flex-column">
+      <a class="nav-link" href="menu.html"> Dashboard</a>
+      <a class="nav-link" active href="produtos.html">Product</a>
+      <a class="nav-link " href="adicionar.html">Add Products</a>
+    </nav>
+  </div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- HEADER -->
+    <div class="topbar">
+        <div>
+            <h5>Home > Product > Add Product</h5>
+        </div>
+
+        <input type="text" class="form-control search-box" placeholder="Search anything">
+    </div>
+
+    <!-- CARD -->
+    <div class="card card-custom p-4">
+
+        <h5 class="mb-4">Product Information</h5>
+
+        <div class="card card-custom p-4 mb-4">
+            <h6 class="mb-3">General Information</h6>
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Product Name *</label>
+                    <input type="text" class="form-control" placeholder="Enter Product Name">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Product Category *</label>
+                    <select class="form-select">
+                        <option>Select Product Category</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Product Price *</label>
+                    <input type="text" class="form-control" placeholder="Enter Product Price">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Product Discount</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Set Product Discount">
+                        <span class="input-group-text">%</span>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Product Description *</label>
+                    <textarea class="form-control" rows="4" placeholder="Enter Product Description"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- UPLOAD -->
+        <div class="card card-custom p-4 mb-4">
+            <h6 class="mb-3">Product Images</h6>
+
+            <div class="upload-box">
+                <p class="fw-bold">Drop files here or click to upload.</p>
+                <small>(This is just a demo dropzone. Selected files are not actually uploaded.)</small>
+            </div>
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="d-flex justify-content-end gap-2">
+            <button class="btn btn-light">Cancel</button>
+            <button class="btn btn-success">Add Product</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
